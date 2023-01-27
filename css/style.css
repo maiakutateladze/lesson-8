@@ -1,0 +1,94 @@
+.center-block {
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    position: relative;
+    transition-property: all;
+    /*transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 3s;*/
+    transition: all 2s linear;
+}
+.child-center-block {
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    /*transition-property: all;
+    transition-duration: 0.3s;*/
+
+    transition: all 0.3s;
+}
+/* hover effects*/
+.child-center-block:hover {
+    width: 300px;
+    background-color: yellow;
+    cursor: pointer;
+    transform: translate(-50%,-50%) rotate(45deg);
+
+}
+.center-block:hover {
+    background-color: red;
+}
+
+/* .center-block:hover .child-center-block{
+      bacground-color: deeppink;
+}*/
+
+/*keyframe animation example*/
+.image-car {
+    height: 130px;
+    /*animation-name: caranimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+    animation: animationcarmove  2s infinite alternate 2s;
+    /*position: absolute;
+    
+}
+.animation-block {
+    position: relative;
+    height: 150px;*/
+}
+
+/*@keyframes caranimation {
+    from {left:0}
+    to {left:900px}
+}*/
+
+/*example2*/
+@keyframes animationcarmove {
+    0% {transform: translateX(0) rotate(0%);}
+    25% {transform: translateX(200px) rotate(45deg);}
+    50% {transform: translateX(400px) rotate(360deg);}
+    80% {transform: translateX(600px) rotate(45deg);}
+    100% {transform: translateX(800px) rotate(0deg);}
+
+    
+
+}
+
+/*rotate keyframe*/
+.rotate-block {
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+    animation: rotateblock 3s infinite;
+
+}
+.rotate-wraper {
+    height: 250px;
+    padding-top: 50px;
+}
+
+@keyframes rotateblock {
+    0% {transform: rotate(0deg);}
+    40% {transform: rotate(360deg);}
+    60% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+
+}
+
